@@ -1,3 +1,13 @@
+/*
+ ============================================================================
+ Name        : calc.c
+ Author      : Nikolay Kopitin
+ Version     :
+ Copyright   :
+ Description : Calculator in C, Ansi-style
+ ============================================================================
+ */
+
 // 1-Vichitanie
 // 2-Slozhenie
 // 3-Delenie
