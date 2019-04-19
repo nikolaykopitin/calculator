@@ -1,0 +1,102 @@
+// 1-Vichitanie
+// 2-Slozhenie
+// 3-Delenie
+// 4-Umnozhenie
+// 5-Vozvedenie v stepen
+// 6-Factorial
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(void)
+{
+	setvbuf(stdout, NULL, _IONBF, 0);
+    setvbuf(stderr, NULL, _IONBF, 0);
+    float i, x, y;
+    int s, n, r;
+    r = 0;
+    do
+    {
+        puts("Vvedite kod operacii:");
+        scanf("%i", &s);
+
+        switch (s)
+        {
+
+            case 1:
+                puts("O0eraciya 'Vichitanie'.");
+                puts("Vvedite pervoe znachenie.");
+                scanf("%f", &x);
+                puts("Vvedite vtoroe znachenie.");
+                scanf("%f", &y);
+                printf("X - Y = %f\n", x - y);
+                break;
+            case 2:
+                puts("Oeraciya 'Slozhenie'.");
+                puts("Vvedite pervoe znachenie.");
+                scanf("%f", &x);
+                puts("Vvedite vtoroe znachenie.");
+                scanf("%f", &y);
+                printf("X + Y = %f\n", x + y);
+                break;
+            case 3:
+               puts("Operaciya 'Delenie'.");
+               puts("Vvedite pervoe znachenie.");
+               scanf("%f", &x);
+               puts("Vvedite vtoroe znachenie.");
+               scanf("%f", &y);
+               if (y == 0)
+               {
+                   printf("Error!\n");
+               } else
+               {
+               printf("X / Y = %f\n", x / y);
+               }
+               break;
+            case 4:
+                puts("Operaciya 'Umnozhenie'.");
+                puts("Vvedite pervoe znachenie.");
+                scanf("%f", &x);
+                puts("Vvedite vtoroe znachenie.");
+                scanf("%f", &y);
+                printf("X * Y = %f\n", x * y);
+                break;
+            case 5:
+                puts("Operaciya 'Vozvedenie v stepen'.");
+                puts("Vvedite znachenie.");
+                scanf("%f", &x);
+                puts("Vvedite stepen.");
+                scanf("%i", &n);
+                i = 1;
+                for (; n > 0; --n)
+                {
+                    i = i * x;
+                }
+                printf("X ^ N = %f\n", i);
+                break;
+            case 6:
+                puts("Operaciya'Factorial'.");
+                puts("Vvedite znachenie.");
+                scanf("%f", &x);
+                if (x == 0)
+                {
+                    printf("X! = 1\n");
+                } else {
+                    i = 1;
+                    for (n = 1; n <= x; n++)
+                    {
+                        i = i * n;
+                    }
+                    printf("X! = %f\n", i);
+                }
+                break;
+            default:
+                puts("Error!");
+                break;
+        }
+        puts("Zapustit eshe raz? 1/0: 1 - da, 0 - net");
+        scanf("%i", &r);
+    }
+    while (r != 0);
+}
